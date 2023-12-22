@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="./styles.css" rel="stylesheet">
+    <title>ATG.World</title>
+</head>
+<body>
+  <div class="container">
+    <div class="d d-flex justify-content-between margintop">
+      <img src="./img/APGWORLD.png" alt="ATG WORLD" height="25" width="150">
+      <form class="col-10 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+        <input type="search" class="form-control" placeholder="Search for your favourite groups in ATG" aria-label="Search" size="40">
+      </form>
+      <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Create Account.<span class="underline-text">It's Free!</span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      </ul>
+    </div>
+    <div class="card modal" id="loginModal">
+      <div class="card-body modal-content">
+        <div class="d-flex justify-content-end"><span class="close" onclick="closeModal()">&times;</span></div>
+      <p>Let's learn, share & inspire each other with our passion for computer engineering. Sign up now 🤘🏼</p>
+      <div class="d-flex justify-content-evenly">
+        <div>
+          <h1>Create Account</h1>
+          <div class="input-group">
+            <input type="text"  placeholder="First Name" class="form-control">
+            <input type="text" placeholder="Last Name" class="form-control">
+          </div>
+          <div class="input-group">
+            <input type="text"  placeholder="Email" class="form-control">
+          </div>
+          <div class="input-group">
+          <input type="password" placeholder="Password" class="form-control">
+          </div>
+          <div class="input-group">
+            <input type="password" placeholder="Confirm Password" class="form-control">
+            </div>
+          <button type="button" class="btn btn-primary">Create Account</button>
+          <button type="button" class="btn btn-outline-dark"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
+            <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
+          </svg> Sign Up with Google</button>
+          <button type="button" class="btn btn-outline-dark"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+          </svg> Sign Up with Facebook</button>
+        </div>
+        <div>
+           <span>Already have an Account.<a style="text-decoration: underline;" id="navbarDropdown1" href="#" onclick="openModal1()">Sign in</a></span>
+           <br>
+           <img src="./img/login-img.2ba3c9510ab22c75ccb2.png">
+           <br>
+           <footer>By signing up, you agree to our Terms & conditions, Privacy policy</footer>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="card modal" id="loginModal1">
+      <div class="card-body modal-content">
+        <div class="d-flex justify-content-end"><span class="close" onclick="closeModal1()">&times;</span></div>
+        <p>Let's learn, share & inspire each other with our passion for computer engineering. Sign up now 🤘🏼</p>
+        <div class="d-flex justify-content-evenly f">
+          <div class="m">
+            <h1>Sign In</h1>
+            <div class="input-group">
+              <input type="text"  placeholder="Email" class="form-control">
+            </div>
+            <div class="input-group">
+            <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="button" class="btn btn-primary">Create Account</button>
+          <button type="button" class="btn btn-outline-dark"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
+            <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
+          </svg> Sign Up with Google</button>
+          <button type="button" class="btn btn-outline-dark"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+          </svg> Sign Up with Facebook</button>
+          <h5><a style="color:black" href="#">Forgot Password?</a></h5>
+          </div>
+          <div>
+            <span>Don't have an Account yet?<a style="text-decoration: underline;" href="#" onclick="openModal()">Create new for free</a></span>
+            <br>
+            <br>
+           <img src="./img/login-img.2ba3c9510ab22c75ccb2.png">
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <br>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="./img/Rectangle.png" alt="First slide">
+        </div>
+        <div class="carousel-caption d-flex justify-content-between q g">
+           <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+            </svg>
+           </div>
+           <div>
+            <button type="button" class="btn btn-secondary">Join Group</button>
+           </div>
+        </div>
+        <div class="carousel-caption d-md-block">
+          <h2 style="text-align: left;">Computer Engineering</h2>
+        <p style="text-align: left;">142,765 Computer Engineers follow this</p>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <div class="d-flex justify-content-around container">
+      <div class="margin">
+      <a href="#">Posts(368)</a>
+      </div>
+      <div></div>
+      <div class="dropdown">
+        <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Filter All:
+        </button>
+      </div>
+    </div>
+    <br>
+    <div class="d">
+      <div class="d-flex justify-content-around">
+      <div class="margin">
+        <a href="#" class="selected">All Posts(32)</a>
+        <a href="#">Article</a>
+        <a href="#">Event</a>
+        <a href="#">Education</a>
+        <a href="#">Job</a>
+      </div>
+      <div class="padding">
+        <div class="dropdown">
+          <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Write a Post
+          </button>
+          <button type="button" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" fill="currentColor" class="bi bi-person-plus" viewBox="0 0 16 16">
+            <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z"/>
+            <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5"/>
+          </svg> Join Group</button>
+        </div>
+      </div>
+      </div> 
+  </div>
+  <br>
+  <div class="d-flex justify-content-center container">
+    <div>
+    <div class="card">
+      <img class="card-img-top" src="./img/Rectangle-5.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">✍️ Article</h5>
+        <div class="d-flex justify-content-between">
+          <div>
+            <h2 style="color:black;margin-top: 0;">What if famous brands had regular fonts? Meet RegulaBrands!</h2>
+          </div>
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+              <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+            </svg>
+          </div>
+        </div>
+        <p class="card-text">I’ve worked in UX for the better part of a decade. From now on, I plan to rei…</p>
+        <div class="d-flex justify-content-between">
+          <div>
+            <span><img src="./img/Rectangle-3.png"> Sarthak Kamra</span>
+          </div>
+          <div class="padding">
+             <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+              <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+              <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+            </svg> 1.4K views</span>
+            <button type="button" class="btn btn-light"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
+              <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5"/>
+            </svg></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="./img/Rectangle-5-1.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">🔬️ Education</h5>
+        <div class="d-flex justify-content-between">
+          <div>
+            <h2 style="color:black;margin-top: 0;">Tax Benefits for Investment under National Pension Scheme launched by Government</h2>
+          </div>
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+              <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+            </svg>
+          </div>
+        </div>
+        <p class="card-text">I’ve worked in UX for the better part of a decade. From now on, I plan to rei…</p>
+        <div class="d-flex justify-content-between">
+          <div>
+            <span><img src="./img/Rectangle-3-1.png"> Sarah West</span>
+          </div>
+          <div class="padding">
+             <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+              <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+              <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+            </svg> 1.4K views</span>
+            <button type="button" class="btn btn-light"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
+              <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5"/>
+            </svg></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="./img/Rectangle5.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">🗓️ Meetup</h5>
+        <div class="d-flex justify-content-between">
+          <div>
+            <h2 style="color:black;margin-top: 0;">Finance & Investment Elite Social Mixer @Lujiazui</h2>
+          </div>
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+              <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+            </svg>
+          </div>
+        </div>
+        <div class="d-flex justify-content-start marginright">
+          <div>
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="18" fill="currentColor" class="bi bi-calendar-event-fill" viewBox="0 0 16 16">
+              <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-3.5-7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5"/>
+            </svg> Fri, 12 Oct, 2018</span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="18" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+              <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+            </svg>Ahmedabad, India</span>
+          </div>
+        </div>
+        <button type="button" class="btn btn-outline-danger">Visit Website</button>
+        <div class="d-flex justify-content-between">
+          <div>
+            <span><img src="./img/Rectangle-3-2.png"> Ronal Jones</span>
+          </div>
+          <div class="padding">
+             <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+              <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+              <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+            </svg> 1.4K views</span>
+            <button type="button" class="btn btn-light"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
+              <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5"/>
+            </svg></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"> 💼️ Job</h5>
+        <div class="d-flex justify-content-between">
+          <div>
+            <h2 style="color:black;margin-top: 0;">Software Develepor</h2>
+          </div>
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+              <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+            </svg>
+          </div>
+        </div>
+        <div class="d-flex justify-content-start marginright">
+          <div>
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="18" fill="currentColor" class="bi bi-suitcase-lg-fill" viewBox="0 0 16 16">
+              <path d="M7 0a2 2 0 0 0-2 2H1.5A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14H2a.5.5 0 0 0 1 0h10a.5.5 0 0 0 1 0h.5a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2H11a2 2 0 0 0-2-2zM6 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1zM3 13V3h1v10zm9 0V3h1v10z"/>
+            </svg> Innovaccer Analytics Private Ltd.</span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="18" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+              <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+            </svg>Noida, India</span>
+          </div>
+        </div>
+        <button type="button" class="btn btn-outline-success">Apply on Timejobs</button>
+        <div class="d-flex justify-content-between">
+          <div>
+            <span><img src="./img/Rectangle-3-3.png"> Joseph Gray</span>
+          </div>
+          <div class="padding">
+             <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+              <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+              <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+            </svg> 1.4K views</span>
+            <button type="button" class="btn btn-light"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
+              <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5"/>
+            </svg></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="marginleft d size">
+      <div>
+        <div class="d-flex justify-content-between">
+          <div>
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+              <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+            </svg>Lahore, India</span>
+          </div>
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+              <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <br>
+      <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+      </svg> Your location will help us serve better and extend a personalised experience.</span>
+      <br>
+      <br>
+      <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" fill="currentColor" class="bi bi-hand-thumbs-up-fill" viewBox="0 0 16 16">
+        <path d="M6.956 1.745C7.021.81 7.908.087 8.864.325l.261.066c.463.116.874.456 1.012.965.22.816.533 2.511.062 4.51a9.84 9.84 0 0 1 .443-.051c.713-.065 1.669-.072 2.516.21.518.173.994.681 1.2 1.273.184.532.16 1.162-.234 1.733.058.119.103.242.138.363.077.27.113.567.113.856 0 .289-.036.586-.113.856-.039.135-.09.273-.16.404.169.387.107.819-.003 1.148a3.163 3.163 0 0 1-.488.901c.054.152.076.312.076.465 0 .305-.089.625-.253.912C13.1 15.522 12.437 16 11.5 16H8c-.605 0-1.07-.081-1.466-.218a4.82 4.82 0 0 1-.97-.484l-.048-.03c-.504-.307-.999-.609-2.068-.722C2.682 14.464 2 13.846 2 13V9c0-.85.685-1.432 1.357-1.615.849-.232 1.574-.787 2.132-1.41.56-.627.914-1.28 1.039-1.639.199-.575.356-1.539.428-2.59z"/>
+      </svg> Recommended Groups</span>
+      <br>
+      <br>
+      <div class="d-flex justify-content-between">
+        <div>
+          <p><img src="./img/Rectangle-6.png" height="40" width="40"> Lesiure</p>
+        </div>
+        <div>
+          <button type="button" class="btn btn-light">Follow</button>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between">
+        <div>
+          <p><img src="./img/Rectangle-6-2.png" height="40" width="40"> Activism</p>
+        </div>
+        <div>
+          <button type="button" class="btn btn-light">Follow</button>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between">
+        <div>
+          <p><img src="./img/Rectangle-6-3.png" height="40" width="40"> MBA</p>
+        </div>
+        <div>
+          <button type="button" class="btn btn-light">Follow</button>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between">
+        <div>
+          <p><img src="./img/Rectangle-6-2 (1).png" height="40" width="40"> Philosophy</p>
+        </div>
+        <div>
+          <button type="button" class="btn btn-light">Follow</button>
+        </div>
+      </div>
+      <br>
+      <div class="d-flex justify-content-end">
+        <div>
+          <a href="#">See more...</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
+  </body>
+</html>
